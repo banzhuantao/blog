@@ -1,0 +1,41 @@
+name: Build & Sync dist to B Repo
+
+# 触发条件：推送到 master 分支时
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. 拉取 blog 仓库代码
+      - name: Checkout blog repo
+        uses: actions/checkout@v4
+
+      # 2. 准备 Node 环境
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # 3. 安装依赖 + 构建（云端生成 dist）
+      - name: Install dependencies and build
+        run: |
+          pnpm install
+          pnpm run build   # 这一步在云端生成 dist
+
+      # 4. 把 dist 推送到 banzhuantao.github.io 仓库
+      - name: Push dist to banzhuantao.github.io repo
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          # 👇 1. 用户名/仓库名
+          external_repository: banzhuantao/banzhuantao.github.io
+          # 👇 2. 使用 blog 仓库里存的 Secret
+          personal_token: ${{ secrets.PUSH_DIST_TO_BANZHUANTAO_IO_TOKEN }}
+          # 要推送的目录
+          publish_dir: ./.vitepress/dist
+          # 推送到 banzhuantao.github.io 仓库的分支
+          publish_branch: master
+          # banzhuantao.github.io 仓库提交信息
+          commit_message: "push dist"
