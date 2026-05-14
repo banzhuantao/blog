@@ -1,4 +1,4 @@
-name: Build & Sync dist to B Repo
+name: Build & Sync dist to banzhuantao.github.io Repo
 
 # 触发条件：推送到 master 分支时
 on:
@@ -13,11 +13,18 @@ jobs:
       - name: Checkout blog repo
         uses: actions/checkout@v4
 
+      # 安装 pnpm
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 10
+
       # 2. 准备 Node 环境
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'pnpm' # 加速缓存
 
       # 3. 安装依赖 + 构建（云端生成 dist）
       - name: Install dependencies and build
