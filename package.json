@@ -2,10 +2,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vitepress dev",
     "build": "vitepress build",
-    "preview": "vitepress preview",
-    "preinstall": "npx only-allow pnpm"
+    "dev": "vitepress dev",
+    "preinstall": "npx only-allow pnpm",
+    "preview": "vitepress preview"
   },
   "dependencies": {
     "@vue/repl": "^4.7.1",
@@ -20,22 +20,24 @@
     "@types/markdown-it": "^14.1.2",
     "@types/node": "^25.5.2",
     "oxc-minify": "^0.124.0",
+    "prettier": "^3.8.3",
+    "prettier-plugin-packagejson": "^3.0.2",
     "typescript": "^5.9.3",
     "vitepress-plugin-group-icons": "^1.7.3",
     "vitepress-plugin-llms": "^1.12.0",
     "vue-tsc": "^3.2.6"
   },
+  "packageManager": "pnpm@10.33.0",
   "engines": {
     "node": ">=20"
   },
-  "packageManager": "pnpm@10.33.0",
   "pnpm": {
-    "overrides": {
-      "vitepress>vite": "npm:vite@8.0.7"
-    },
     "onlyBuiltDependencies": [
       "esbuild",
       "vue-demi"
-    ]
+    ],
+    "overrides": {
+      "vitepress>vite": "npm:vite@8.0.7"
+    }
   }
 }

@@ -27,5 +27,8 @@ features:
   - title: microservice
     details: link microservice docs
     link: /microservice
+  - title: IDE
+    details: link IDE docs
+    link: /ide
 ---
 
