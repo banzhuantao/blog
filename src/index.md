@@ -4,15 +4,15 @@ layout: home
 
 hero:
   name: "BanZhuanTao"
-  text: "Learn programming"
-  tagline: My great project tagline
+  text: "Keep a record"
+  tagline: An outstanding software development engineer
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Frontend
+      link: 
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Backend
+      link: 
 
 features:
   - title: Browser
@@ -24,5 +24,8 @@ features:
   - title: React
     details: link React docs
     link: /react
+  - title: microservice
+    details: link microservice docs
+    link: /microservice
 ---
 

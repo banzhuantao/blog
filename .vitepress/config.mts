@@ -1,9 +1,18 @@
 import {defineConfig} from 'vitepress'
+import {fileURLToPath, URL} from "node:url"
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "BanZhuanTao",
   description: "Learn programming",
+  srcDir: "./src",
+  vite: {
+    resolve: {
+      alias: {
+        '@': fileURLToPath(new URL('../src', import.meta.url))
+      }
+    }
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -14,14 +23,15 @@ export default defineConfig({
       level: [2, 3],
       label: "本页目录"
     },
+    search: {
+      provider: 'local'
+    },
     sidebar: {
       "/browser/": [
         {
           text: "开始",
           items: [
             {text: '简介', link: '/browser'},
-            // {text: 'Markdown Examples', link: '/browser/markdown-examples'},
-            // {text: 'Runtime API Examples', link: '/browser/api-examples'}
           ]
         },
         {
@@ -46,6 +56,20 @@ export default defineConfig({
             {text: '简介', link: '/react'},
           ]
         },
+      ],
+      "/microservice/": [
+        {
+          text: "开始",
+          items: [
+            {text: '简介', link: '/microservice'},
+          ]
+        },
+        {
+          text: "前端",
+          items: [
+            {text: 'qiankun', link: '/microservice/qiankun'},
+          ]
+        },
       ]
     },
 
@@ -53,6 +77,6 @@ export default defineConfig({
       {icon: 'github', link: 'https://github.com/banzhuantao/banzhuantao.github.io'}
     ]
   },
-  srcDir: "./src",
+
 })
 

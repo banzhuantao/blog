@@ -1,0 +1,71 @@
+- [ ] 提升 ts 类型覆盖率
+- [ ] grid 布局；
+- [ ] css3 动画部分；
+- [x] requestAnimationFrame 页面每一帧调用一次；
+- [ ] 继承；
+- [ ] 数组操作方法；
+- [ ] call, appaly; bind；
+- [ ] 浏览器储存；
+- [ ] 伪数组转数组；
+- [ ] 函数柯里化；
+- [ ] 函数防抖、节流；
+- [ ] MutationObserver API 用来监视 DOM 变动；
+- [ ] 判断对象的属性名是在对象本身上而不是在原型上面；
+- [ ] function hasOwn (obj, key) { return Object.prototype.hasOwnProperty.call(obj, key); }；
+- [ ] Object.seal 密封；Object.seal() 方法封闭一个对象，阻止添加新属性并将所有；
+- [ ] Object.freeze 冰冻；Object.freeze() 方法可以冻结一个对象，一个被冻结的对象再也不能被修改； 冻结了一个对象则不能向这个对象添加新的属性，不能删除已有属性， 不能修改该对象已有属性的可枚举性、可配置性、可写性、以及不能修改已有属性的值。 此外，冻结一个对象后该对象的原型也不能被修改。 freeze() 返回和传入的参数相同的对象；
+- [ ] 浏览器解析 css 选择器为从右往左，因为从右往左可能会在第一次读取时就能获取到元素，而从左往右就不能，需要层层解析；
+- [ ] viewport 适配；
+- [ ] 角向渐变；
+- [ ] css- object-fit；
+- [ ] c3 - 自定义属性；
+- [ ] css - min-content / max-content;
+- [ ] resize (普通元素也可以像 textarea 那样 resize)；
+- [ ] js 判断数据类型；
+- [ ] cross-env；
+- [ ] js 微任务 / 宏任务；
+- [ ] asm.js
+- [ ] 看到一个关于图形化处理的，里面涉及到的一些技术：
+  - gis
+  - cesium
+  - GPU
+  - shader
+  - webgl
+  - three.js
+  - unity
+- [ ] art-template 模板；
+- [ ] touch-action；
+- [ ] [vitepress](https://fttp.jjf-tech.cn/vitepress/);
+- [ ] AES 加密，前端可以使用到 crypto-js 插件；
+- [ ] [使用 cspell 检查英文文案](https://www.jianshu.com/p/efe6726286f6)；
+- [ ] font-display；
+- [ ] WeakMap、WeakSet
+- [ ] BigInt 类型;
+- [ ] Reflect;
+- [ ] [原生 URL 构造器](https://developer.mozilla.org/en-US/docs/Web/API/URL)
+- [ ] [Window.scroll](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/scroll)
+- [ ] https://juejin.cn/post/7129479535694708743；
+- [ ] https://juejin.cn/post/7129374520015585317
+- [ ] 原型链、继承、作用域、回收机制、深拷贝、LIFE、Promise、EventLoop、线程
+- [ ] 算法：排序、动态规划、分治、贪心法、穷举法、回溯法
+- [ ] 浏览器及网络：渲染原理、缓存机制、http/https 协议、跨域
+- [ ] unocss
+- [ ] gitpod
+- [ ] puppeteer
+- [ ] SpeechSynthesisUtterance
+- [ ] TypedArray
+- [ ] https://immutable-js.com/
+- [ ] 大数据的处理：BigInt、[decimal](https://mikemcl.github.io/decimal.js/)、[big.js](https://mikemcl.github.io/big.js/)
+- [ ] 断点续传、断点重传、切片上传、前端切片web-worker多线程切片
+- [ ] indexDB
+- [ ] [pptr](https://pptr.dev/)
+- [ ] patch-package 可以小范围修改npm包的内容，生成好补丁patches，并配置在package文件中
+- [ ] GC？
+- [ ] AOT？
+- [ ] 密度计算？
+- [ ] 前端常用加解密？国密？
+- [ ] 动态增长
+- [ ] Tree-Shaking
+- [ ] [notification 桌面通知](https://developer.mozilla.org/zh-CN/docs/Web/API/Notification)
+- [ ] [queueMicrotask](https://developer.mozilla.org/zh-CN/docs/Web/API/HTML_DOM_API/Microtask_guide)
+- [ ] 数据切片 大文件上传 断点续传
