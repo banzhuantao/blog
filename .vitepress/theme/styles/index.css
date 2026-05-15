@@ -1,0 +1,4 @@
+/* 一级标题（# 标题）与下方内容的间距 */
+.vp-doc h1 {
+  margin-bottom: 3rem;
+}

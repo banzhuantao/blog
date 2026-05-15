@@ -10,14 +10,18 @@ export default defineConfig({
       {text: 'Home', link: '/'},
       {text: 'Examples', link: '/markdown-examples'}
     ],
+    outline: {
+      level: [2, 3],
+      label: "本页目录"
+    },
     sidebar: {
       "/browser/": [
         {
           text: "开始",
           items: [
             {text: '简介', link: '/browser'},
-            {text: 'Markdown Examples', link: '/browser/markdown-examples'},
-            {text: 'Runtime API Examples', link: '/browser/api-examples'}
+            // {text: 'Markdown Examples', link: '/browser/markdown-examples'},
+            // {text: 'Runtime API Examples', link: '/browser/api-examples'}
           ]
         },
         {
